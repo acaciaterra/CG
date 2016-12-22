@@ -102,7 +102,7 @@ void init(void) {
 	// definig the storage form of pixels in the texture (1 means alignment per byte)
 	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 
-	counter_texture = loadBMP_custom("marble.bmp", iw, ih);
+	//counter_texture = loadBMP_custom("marble.bmp", iw, ih);
 	// association function
 	glBindTexture(GL_TEXTURE_2D, textures[0]);
 	// definition of the color mix
@@ -205,13 +205,14 @@ void init(void) {
 	knots_taca_u[6] = 0.25;
 	knots_taca_u[7] = 0.5;
 	knots_taca_u[8] = 0.5;
-	knots_taca_u[9] = 0.75;
+ 	knots_taca_u[9] = 0.75;
 	knots_taca_u[10] = 0.75;
 	knots_taca_u[11] = 0.99;
-	knots_taca_u[12] = 1.0;
+	knots_taca_u[12] = 0.99;
 	knots_taca_u[13] = 1.0;
 	knots_taca_u[14] = 1.0;
 	knots_taca_u[15] = 1.0;
+	knots_taca_u[16] = 1.0;
 
 	knots_taca_v[0] =  0.0;
 	knots_taca_v[1] =  0.0;
@@ -347,22 +348,22 @@ void display(void) {
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	glClearColor(0.0, 1.0, 1.0, 1.0);
+	glClearColor(1.0, 1.0, 1.0, 1.0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	gluLookAt(cam_x, cam_y, cam_z, center_x, center_y, center_z, 0.0, 1.0, 0.0);
 
-//	glPushMatrix();
-//		draw_taca();
-//	glPopMatrix();
+	glPushMatrix();
+		draw_taca();
+	glPopMatrix();
 
 	// glPushMatrix();
 	// 	draw_shampoo();
 	// glPopMatrix();
 
-	glPushMatrix();
-		draw_testall();
-	glPopMatrix();
+	// glPushMatrix();
+	// 	draw_testall();
+	// glPopMatrix();
 
 	glutSwapBuffers();
 }
