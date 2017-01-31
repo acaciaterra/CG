@@ -17,8 +17,3 @@
 - Com os botões de 1 a 5 é possível mudar a posição da camêra ao redor da cena.
 - O botão '+' possibilita uma visão mais de cima.
 - O botão '-' retorna a camêra para a posição normal.
-
-#Observação:
-A taça tem tudo no código necessária para ficar transparente, mas não acontece. Tentamos buscar alguma solução,
-mas não conseguimos. O estranho é que realizando o mesmo processo feito com a taça na lâmpada, a lâmpada se torna
-transaparente.
