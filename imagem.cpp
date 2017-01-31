@@ -496,13 +496,6 @@ void display(void) {
 	gluLookAt(cam_x, cam_y, cam_z, CENTER_X, CENTER_Y, CENTER_Z, 0.0, 1.0, 0.0);
 
 	glPushMatrix();
-		glTranslated(0.0, -2.8, 0.0);
-		glScalef(0.75f, 1.2f, 1.0f);
-		draw_taca();
-	glPopMatrix();
-
-
-	glPushMatrix();
 		glTranslated(0, 0, -10);
 		glTranslated(-10, 0, 0);
 		glTranslated(0, -2.6, 0);
@@ -534,6 +527,12 @@ void display(void) {
 		glTranslated(0, -3.6, -10);
 		glScalef(30, 1, 30);
 		glutSolidCube(1);
+	glPopMatrix();
+
+	glPushMatrix();
+		glTranslated(0.0, -2.8, 0.0);
+		glScalef(0.75f, 1.2f, 1.0f);
+		draw_taca();
 	glPopMatrix();
 
 	glutSwapBuffers();

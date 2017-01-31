@@ -12,7 +12,7 @@
 #define CENTER_Y 0
 #define CENTER_Z -10
 
-const GLdouble taca_color[] = {1.0, 1.0, 1.0, 0.3};
+const GLdouble taca_color[] = {1.0, 1.0, 1.0, 0.4};
 const GLubyte lamp_color[] = {255, 255, 255, 255};
 const GLubyte lamp1_color[] = {168, 168, 168, 255};
 const GLubyte chave_color[] = {205, 205, 205};
